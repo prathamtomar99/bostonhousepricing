@@ -29,7 +29,7 @@ def predict():
     final_input= scalar.transform(np.array(data).reshape(1,-1))
     print(final_input)
     output = regmodel.predict(final_input)[0]
-    return render_template("home.html",prediction_text="The predicted price of RIDDHI GOO is {}".format(output))
+    return render_template("home.html",prediction_text="The predicted price of House is {} :median value of owner-occupied homes in $1000s.".format(output))
 
 if __name__=="__main__":
     app.run(debug=True)

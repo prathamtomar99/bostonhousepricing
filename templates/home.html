@@ -4,30 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
+<body >
     <div class="login">
         <h1>Boston Huse Price Prediction</h1>
         <form action="{{url_for('predict')}}" method="post">
-            <input type="text" name="CRIM" placeholder="CRIM" required="required" /><br>
-            <input type="text" name="ZN" placeholder="ZN" required="required" /><br>
-            <input type="text" name="INDUS" placeholder="INDUS" required="required" /><br>
-            <input type="text" name="CHAS" placeholder="CHAS" required="required" /><br>
-            <input type="text" name="NOX" placeholder="NOX" required="required" /><br>
-            <input type="text" name="RM" placeholder="RM" required="required" /><br>
-            <input type="text" name="AGE" placeholder="AGE" required="required" /><br>
-            <input type="text" name="DIS" placeholder="DIS" required="required" /><br>
-            <input type="text" name="RAD" placeholder="RAD" required="required" /><br>
-            <input type="text" name="TAX" placeholder="TAX" required="required" /><br>
-            <input type="text" name="PTRATIO" placeholder="PTRATIO" required="required" /><br>
-            <input type="text" name="B" placeholder="B" required="required" /><br>
-            <input type="text" name="LSTAT" placeholder="LSTAT" required="required" /><br>
-
-            <button type="submit" >predict</button>
+            <div class="div">
+                <span class="text">Per capita crime rate by town.</span>
+                <input class="form" type="text" name="CRIM" placeholder="CRIM" required="required" />
+            </div>
+            <div class="div">
+                <span class="text">Proportion of residential land zoned for lots over 25,000 sq.ft.</span>
+                <input class="form" type="text" name="ZN" placeholder="ZN" required="required" />
+            </div>
+            <div class="div">
+                <span class="text">Proportion of non-retail business acres per town.</span>
+                <input class="form" type="text" name="INDUS" placeholder="INDUS" required="required" />
+            </div>
+            <div class="div">
+                <span class="text">Charles River dummy variable (= 1 if tract bounds river; 0 otherwise).</span>
+                <input class="form" type="text" name="CHAS" placeholder="CHAS" required="required" />
+            </div>
+            <div class="div">
+                    <span class="text">Nitrogen oxides concentration (parts per 10 million).</span>
+                <input class="form" type="text" name="NOX" placeholder="NOX" required="required" />
+            </div>
+            <div class="div">
+                <span class="text">Average number of rooms per dwelling.</span>
+                <input class="form" type="text" name="RM" placeholder="RM" required="required" />
+            </div>
+            <div class="div">
+                <span class="text">Proportion of owner-occupied units built prior to 1940.</span>
+                <input class="form" type="text" name="AGE" placeholder="AGE" required="required" />
+            </div>
+            <div class="div">
+                <span class="text">Weighted mean of distances to five Boston employment centres.</span>
+                <input class="form" type="text" name="DIS" placeholder="DIS" required="required" />
+            </div>
+            <div class="div">
+                <span class="text">Index of accessibility to radial highways.</span>
+                <input class="form" type="text" name="RAD" placeholder="RAD" required="required" />
+            </div>
+            <div class="div">
+                <span class="text">Full-value property-tax rate per $10,000.</span>
+                <input class="form" type="text" name="TAX" placeholder="TAX" required="required" />
+            </div>
+            <div class="div">
+                <span class="text">Pupil-teacher ratio by town.</span>
+                <input class="form" type="text" name="PTRATIO" placeholder="PTRATIO" required="required" />
+            </div>
+            <div class="div">
+                <span class="text">1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town</span>
+                <input class="form" type="text" name="B" placeholder="B" required="required" />
+            </div>
+            <div class="div">
+                <span class="text">Lower status of the population (percent).</span>
+                <input class="form" type="text" name="LSTAT" placeholder="LSTAT" required="required" />
+            </div>
+            
+            <div class="button" ><button class="btn" type="submit" >predict</button></div>
         </form>
-        <br>
+        {{prediction_text}}
     </div>
-
-    {{prediction_text}}
 </body>
 </html>

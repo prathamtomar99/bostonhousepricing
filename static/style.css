@@ -1,0 +1,44 @@
+body{
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: 100% 100%;
+    /* opacity: 0.5; */
+    overflow: hidden;
+    position: relative;
+    background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url("background.jpg");
+
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+.form{
+    width: 10%;
+}
+h1{
+    padding: 0;
+    margin: 0;
+}
+.div{
+    justify-content:space-between;
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    align-items: center;
+}
+.login{
+    width:70%;
+}
+.button{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    width: 40%;
+}
